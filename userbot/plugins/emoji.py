@@ -24,7 +24,7 @@ async def _(event):
             "(ﾟ<|＼(･ω･)／|>ﾟ)",
             "ヾ(o✪‿✪o)ｼ",
         ]
-    elif input_str in "thinking":
+    elif input_str in "pensieroso":
         emoticons = [
             "(҂⌣̀_⌣́)",
             "（；¬＿¬)",
@@ -32,7 +32,7 @@ async def _(event):
             "┌[ O ʖ̯ O ]┐",
             "〳 ͡° Ĺ̯ ͡° 〵",
         ]
-    elif input_str in "waving":
+    elif input_str in "agitato":
         emoticons = [
             "(ノ^∇^)",
             "(;-_-)/",
