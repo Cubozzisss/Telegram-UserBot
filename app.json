@@ -1,7 +1,7 @@
 {
-  "name": "X-tra Telegram",
-  "description": "Userbot created by a SNAPDRAGON and custom fork by ANUBIS\n\n join https://t.me/XtraTgChat for any problems or support",
-  "logo": "https://telegra.ph/file/1be6c59f53fef57b5745b.jpg",
+  "name": "IIOOIIOIIOOII",
+  "description": "Userbot created by SNAPDRAGON and custom fork by ANUBIS\n\n join https://t.me/IOIIOIIIOIIOI for any problems or support",
+  "logo": "https://telegra.ph/IOIIOIIIOIIOI-04-04",
   "keywords": [
     "telegram",
     "userbot",
@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/Dark-Princ3/X-tra-Telegram/",
+  "repository": "https://github.com/IIOOIIOIIOOII/USERBOT-ITA/",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
@@ -34,6 +34,24 @@
       "description": "Get this value by running python3 telesetup.py locally",
       "value": ""
     },
+    "HEROKU_API_KEY": {
+      "description": "Go to https://dashboard.heroku.com/account, scroll down and press Reveal API.Required for updater to work.",
+      "value": "",
+      "required": false
+    },
+    "HEROKU_APP_NAME": {
+      "description": "The Value of App Name you filled in right on top.Required for updater to work.",
+      "value": "",
+      "required": false
+    },  
+    "LOGGER": {
+      "description": "Set this to True in case you want the error logs to be stored in the userbot log group, instead of spitting out the file in the current chat, requires a valid BOTLOG_CHATID to be set.",
+      "value": "True"
+    },
+    "PRIVATE_GROUP_ID": {
+      "description": "ChatID of the Log group. Set it to '0' if LOGGER = False and/or if LOGSPAMMER = False.",
+      "value": "0"
+    },
     "MAX_FLOOD_IN_P_M_s": {
       "description": "Maximum number of messages a person can send in pm before getting blocked. Value must be an integer. 3 by default.",
       "value": "3",
@@ -55,7 +73,7 @@
       "required": false
     },
     "GIT_REPO_NAME": {
-      "description": "Your repo name Example: Total-Noob-69/X-Tra-Telegram, but GITHUB_ACCESS_TOKEN must be setup first.",
+      "description": "Your repo name Example: IIOOIIOIIOOII/USERBOT-ITA, but GITHUB_ACCESS_TOKEN must be setup first.",
       "value": "",
       "required": false
     },
@@ -96,7 +114,7 @@
     },
     "TZ": {
       "description": "Required for Correct Time on autopic/get time. Know your timezone from http://www.timezoneconverter.com/cgi-bin/findzone.tzc",
-      "value": "Asia/Kolkata",
+      "value": "Europe/Rome",
       "required": false
     }
   },
