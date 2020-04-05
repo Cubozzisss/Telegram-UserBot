@@ -30,14 +30,14 @@ async def _(event):
             "B",
             "C",
             "FK",
-            "UU",
-            "FCUK",
-            "UOY",
+            "CU",
+            "FUCK",
+            "UCK",
             "C",
+            "K",
+            "U",
             "F",
-            "Y",
-            "F",
-            "Ok Sar 😇"
+            "OK CHAMP 😇"
         ]
 
         for i in animation_ttl:
