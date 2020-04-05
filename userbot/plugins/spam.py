@@ -24,7 +24,7 @@ async def spammer(e):
         await e.delete()
         if LOGGER:
             await e.client.send_message(
-                LOGGER_GROUP,
+                PRIVATE_GROUP_BOT_API_ID,
                 "#SPAM \n\n"
-                "Spam was executed successfully"
+                "Spam eseguita"
                 )
