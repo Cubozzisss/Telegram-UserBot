@@ -8,6 +8,7 @@ from asyncio import wait
 
 from telethon import events
 
+from userbot.utils import admin_cmd
 
 
 @borg.on(events.NewMessage(pattern=r"\.spam", outgoing=True))
@@ -22,9 +23,3 @@ async def spammer(e):
             )
 
         await e.delete()
-        if LOGGER:
-            await e.client.send_message(
-                PRIVATE_GROUP_BOT_API_ID,
-                "#SPAM \n\n"
-                "Spam eseguita"
-                )
