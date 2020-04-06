@@ -14,7 +14,7 @@ import asyncio
 
 
 
-@borg.on(admin_cmd("esporta"), outgoing=True)
+@borg.on(admin_cmd(pattern=r("esporta"), outgoing=True)
 
 async def _(event):
 
