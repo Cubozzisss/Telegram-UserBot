@@ -11,9 +11,9 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "senza nome"
 @command(outgoing=True, pattern="^.alive$")
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
-    await alive.edit("**`∇ STATUS USERBOT ∇`**\n\n"
-                     "`Versione Telethon: 7.0.1\nVersione Python: 3.8.0\nUPDATE:` @IOIIOIIIOIIOI\n"
-                     "`CREATORE BOT:` [SnapDragon7410](tg://user?id=719877937)\n"
-                     "`CPU: In esecuzione...\n\nDATI USER\n`"
-                     f"`USER`: {DEFAULTUSER}\n"
-                     "[REPOSITORY USERBOT](https://github.com/IIOOIIOIIOOII/USERBOT-ITA.git)")
+    await alive.edit("**`⚡∇ STATUS USERBOT ∇⚡`**\n\n"
+                     "`🔹Versione Telethon: 7.0.1\n🔹Versione Python: 3.8.0\n🔸UPDATE:` @IOIIOIIIOIIOI\n"
+                     "`🔸CREATORE BOT:` [SnapDragon7410](tg://user?id=719877937)\n"
+                     "`🔹CPU: In esecuzione...\n\n⚡∇ DATI USER ∇⚡\n`"
+                     f"`🔹USER`: {DEFAULTUSER}\n"
+                     "🔸[REPOSITORY USERBOT](https://github.com/IIOOIIOIIOOII/USERBOT-ITA.git)")
