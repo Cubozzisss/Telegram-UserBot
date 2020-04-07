@@ -47,14 +47,16 @@ async def _(event):
         dc_id = "Need a Profile Picture to check **this**"
         location = str(e)
     caption = """⚙️ DATABASE USER
-🔖ID: <code>{}</code>
+
 🔍NOME: <a href='tg://user?id={}'>{}</a>
-✍️BIO: {}
+🔖ID: <code>{}</code>
 🌏DC ID: {}
 🖼PIC PROFILO: {}
 🔏LIMITATO: {}
 🌐VERIFICATO: {}
 🤖BOT: {}
+✍️BIO: {}
+
 👥GRUPPI IN COMUNE: {}
 """.format(
         user_id,
