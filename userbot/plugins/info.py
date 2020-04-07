@@ -46,17 +46,16 @@ async def _(event):
     except Exception as e:
         dc_id = "Need a Profile Picture to check **this**"
         location = str(e)
-    caption = """⚙️ DATABASE USER
-
-🔍NOME: <a href='tg://user?id={}'>{}</a>
+    caption = """⚙️ DATABASE 
+    
 🔖ID: <code>{}</code>
+🔍NOME: <a href='tg://user?id={}'>{}</a>
+✍️BIO: {}
 🌏DC ID: {}
 🖼PIC PROFILO: {}
 🔏LIMITATO: {}
 🌐VERIFICATO: {}
 🤖BOT: {}
-✍️BIO: {}
-
 👥GRUPPI IN COMUNE: {}
 """.format(
         user_id,
