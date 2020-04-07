@@ -100,7 +100,7 @@ async def updater(message):
     )
 
     if not changelog:
-        await message.edit("`Update...`")
+        await message.edit("`Updating...`")
         await asyncio.sleep(8)
  
     message_one = NEW_BOT_UP_DATE_FOUND.format(
@@ -137,7 +137,7 @@ async def updater(message):
                     if i.name == Var.HEROKU_APP_NAME:
                         heroku_app = i
                 if heroku_app is None:
-                    await message.edit("App Name invalida. Inserisci il nome dell'userbot in heroku in var `HEROKU_APP_NAME.`")
+                    await message.edit("Invalid APP Name. Please set the name of your bot in heroku in the var `HEROKU_APP_NAME.`")
                     return
                 heroku_git_url = heroku_app.git_url.replace(
                     "https://",
@@ -151,12 +151,12 @@ async def updater(message):
                 asyncio.get_event_loop().create_task(deploy_start(tgbot, message, HEROKU_GIT_REF_SPEC, remote))
 
             else:
-                await message.edit("Crea la var `HEROKU_APP_NAME` inserisci e inserisci in value in nome dell'userbot.")
+                await message.edit("Please create the var `HEROKU_APP_NAME` as the key and the name of your bot in heroku as your value.")
                 return
         else:
             await message.edit(NO_HEROKU_APP_CFGD)
     else:
-        await message.edit("No heroku api key trovata in `HEROKU_API_KEY` var")
+        await message.edit("No heroku api key found in `HEROKU_API_KEY` var")
         
 
 def generate_change_log(git_repo, diff_marker):
@@ -168,7 +168,7 @@ def generate_change_log(git_repo, diff_marker):
 
 async def deploy_start(tgbot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
-    await message.edit("Update nuova versione in corso. Attendi 5 minuti e avvia `.alive` per vedere se è in esecuzione.")
+    await message.edit("Update in corso. Attendi 5 minuti e premi `.alive`.")
     await remote.push(refspec=refspec)
     await tgbot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
