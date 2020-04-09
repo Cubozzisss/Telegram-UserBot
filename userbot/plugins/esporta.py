@@ -1,16 +1,14 @@
 #Credit: @r4v4n4
 """Emoji
-
 Available Commands:
-
 .esporta"""
 
 from telethon import events
-
 import asyncio
+from userbot.utils import admin_cmd
 
 
-
+@borg.on(admin_cmd(pattern="esporta"))
 @borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
 
 async def _(event):

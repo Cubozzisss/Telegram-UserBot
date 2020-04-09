@@ -13,10 +13,10 @@ PREV_REPLY_MESSAGE = {}
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**Nessun nome selezionato, cerca il messaggio in** @XtraTgBot"
 USER_BOT_WARN_ZERO = "`Stai spammando troppi messaggi, sei bloccato dall'userbot.` **Io sono impegnato** "
 USER_BOT_NO_WARN = ("[──▄█▀█▄─────────██ \n▄████████▄───▄▀█▄▄▄▄ \n██▀▼▼▼▼▼─▄▀──█▄▄ \n█████▄▲▲▲─▄▄▄▀───▀▄ \n██████▀▀▀▀─▀────────▀▀](tg://user?id=742506768)\n\n"
-                    "`Ciao,sei sul mio SECUTITY SISTEM BOT.Specifica il motivo perchè sei qui,`"
-                    f"{DEFAULTUSER} inbox.\n\n"
-                    "Lascia il tuo nome, numero di telefono, indirizzo e 50€ ti risponderò entro 24h.`\n\n"
-                    "** Premi** `/start` ** per scegliere il motivo perchè mi stai cercando.**")
+                    "`SECUTITY SISTEM BOT.Specifica il motivo perchè sei qui,`"
+                    f"{DEFAULTUSER} 😎.\n\n"
+                    "Lascia il tuo nome, numero di telefono, indirizzo e 500€, risponderò entro 24h.`\n\n"
+                    "**Premi** `/start` ** per scegliere il motivo della chat.**")
 
 
 if Var.PRIVATE_GROUP_ID is not None:
@@ -50,7 +50,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             if not pmpermit_sql.is_approved(chat.id):
                 if not chat.id in PM_WARNS:
                     pmpermit_sql.approve(chat.id, "outgoing")
-                    bruh = "__Added user to approved pms cuz outgoing message >~<__"
+                    bruh = "__🔍🆕 user in white list pms ❕❕❕.__"
                     rko = await borg.send_message(event.chat_id, bruh)
                     await asyncio.sleep(3)
                     await rko.delete()
@@ -77,7 +77,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         if event.fwd_from:
             return
         approved_users = pmpermit_sql.get_all_approved()
-        APPROVED_PMs = "User approvati in chat\n"
+        APPROVED_PMs = "ℹ️USER APPROVATIℹ️\n"
         if len(approved_users) > 0:
             for a_user in approved_users:
                 if a_user.reason:
