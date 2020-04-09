@@ -1,17 +1,14 @@
 """Emoji
-
 Available Commands:
-
 .ding"""
 
 from telethon import events
-
+from userbot.utils import admin_cmd
 import asyncio
 
 
 
-
-
+@borg.on(admin_cmd(pattern="ding"))
 @borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
 
 async def _(event):
@@ -41,7 +38,7 @@ async def _(event):
             "⬜⬜⬛⬜⬜\n⬜⬜⬛⬜⬜\n⬜⬜🔴⬜⬜",
             "⬜⬜⬛⬜⬜\n⬜⬛⬜⬜⬜\n🔴⬜⬜⬜⬜",
             "🔴⬛⬛⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜",
-            "⬜⬜⬜⬜⬜\n⬜ [BECOME A VIDHAYAK](https://github.com/Dark-Princ3/X-tra-Telegram/) ⬜\n⬜⬜⬜⬜⬜"
+            "⬜⬜⬜⬜⬜\n⬜ [LASCIA UNA 💫](https://github.com/IIOOIIOIIOOII/USERBOT-ITA/) ⬜\n⬜⬜⬜⬜⬜"
 
  ]
 

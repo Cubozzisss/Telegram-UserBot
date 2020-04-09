@@ -45,15 +45,15 @@ async def _(event):
             afk_time = datetime.datetime.now()  # pylint:disable=E0602
         USER_AFK = f"yes: {reason}"  # pylint:disable=E0602
         if reason:
-            await borg.send_message(event.chat_id, f"**I shall be Going afk!** __because ~ {reason}__")
+            await borg.send_message(event.chat_id, f"**ADESSO VADO afk ⛔️** __MOTIVO ~ {reason}__")
         else:
-            await borg.send_message(event.chat_id, f"**I am Going afk!**")
+            await borg.send_message(event.chat_id, f"**SONO afk!**")
         await asyncio.sleep(5)
         await event.delete()
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
-                f"Set AFK mode to True, and Reason is {reason}"
+                f"IMPOSTA LA FUNZIONE AFK IN True, and Reason is {reason}"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             logger.warn(str(e))  # pylint:disable=E0602
@@ -72,18 +72,18 @@ async def set_not_afk(event):
         total_afk_time = str((afk_end - afk_start))
     current_message = event.message.message
     if ".afk" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
-        shite = await borg.send_message(event.chat_id, "__Back alive!__\n**No Longer afk.**\n `Was afk for:``" + total_afk_time + "`")
+        shite = await borg.send_message(event.chat_id, "__SONO TORNATO!__\n**No Longer afk.**\n `Was afk for:``" + total_afk_time + "`")
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
-                "Set AFK mode to False"
+                "IMPOSTA LA FUNZIONE AFK IN False"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
                 event.chat_id,
                 "Please set `PRIVATE_GROUP_BOT_API_ID` " + \
-                "for the proper functioning of afk functionality " + \
-                "in @xtratgbot\nCheck pinned message for more info.\n\n `{}`".format(str(e)),
+                "per far funzionare afk " + \
+                "in @xtratgbot\nCerca il messaggio per info.\n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
                 silent=True
             )
