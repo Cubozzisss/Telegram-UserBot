@@ -16,5 +16,5 @@ async def install(event):
     o = stdout.decode()
     _o = o.split("\n")
     o = "\n".join(_o)
-    OUTPUT = f"**List of Plugins:**\n{o}\n\n**TIP:** __If you want to know the commands for a plugin, do:-__ \n `.help <plugin name>` **without the < > brackets.**\n__All plugins might not work directly. Visit__ @XtraTgChat __for assistance.__"
+    OUTPUT = f"**ℹ️ LISTA PLUG-IN 🔍:**\n{o}\n\n**ℹ️ SUGGERIMENTO:** __Per vedere i comandi di un plug-in, fai:-__ \n `.help <plugin name>` **senza le parentesi < > .**\n__Tutti i plug-in potrebbero non funzionare. Visita__ ~ @IOIIIOIIIOI ~ __per assistenza.__"
     await event.edit(OUTPUT)
