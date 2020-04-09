@@ -4,11 +4,12 @@ aiofiles
 aiohttp
 aria2p
 async_generator
-beautifulsoup4
+beautifulsoup4==4.6.0
 bs4
 bwb==3.0.0
 cfscrape
 coffeehouse
+coronavirus
 covid
 cowpy
 cryptg
@@ -41,6 +42,7 @@ python-magic
 pytube
 pytz
 qrcode
+random_cli
 regex
 requests>=2.18.4
 search-engine-parser>=0.4.2
@@ -52,3 +54,4 @@ asyncurban
 urbandict
 wikipedia>=1.4.0
 youtube-dl
+covid-cli
