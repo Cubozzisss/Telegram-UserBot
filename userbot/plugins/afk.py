@@ -1,5 +1,5 @@
 """AFK Plugin for @UniBorg
-Syntax: .ccc REASON"""
+Syntax: .afk REASON"""
 import asyncio
 import datetime
 from datetime import datetime
@@ -17,8 +17,8 @@ afk_time = None
 last_afk_message = {}
 afk_start = {}
 
-@borg.on(admin_cmd(pattern="ccc"))
-@borg.on(events.NewMessage(pattern=r"\.ccc ?(.*)", outgoing=True))  # pylint:disable=E0602
+@borg.on(admin_cmd(pattern="afk"))
+@borg.on(events.NewMessage(pattern=r"\.afk ?(.*)", outgoing=True))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
