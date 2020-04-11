@@ -13,11 +13,12 @@ Available Commands:
 from telethon import events
 
 import asyncio
+from userbot import CMD_HELP 
+
+from userbot.utils import admin_cmd
 
 
-
-
-
+@borg.on(admin_cmd(pattern=f"macos", allow_sudo=True))
 @borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
 
 async def _(event):
@@ -38,8 +39,8 @@ async def _(event):
 
         animation_chars = [
         
-            "`Connecting To Hackintosh...`",
-            "`Initiating Hackintosh Login.`",
+            "`Connessione a Hackintosh...`",
+            "`Inizializza Hackintosh Login.`",
             "`Loading Hackintosh... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Loading Hackintosh... 3%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Loading Hackintosh... 9%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",    
@@ -58,6 +59,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
+@borg.on(admin_cmd(pattern=f"windows", allow_sudo=True))
 @borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
 
 async def _(event):
@@ -78,8 +80,8 @@ async def _(event):
 
         animation_chars = [
         
-            "`Connecting To Windows 10...`",
-            "`Initiating Windows 10 Login.`",
+            "`Connessione a Windows 10...`",
+            "`Inizializza Windows 10 Login.`",
             "`Loading Windows 10... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Loading Windows 10... 3%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Loading Windows 10... 9%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",    
@@ -99,6 +101,7 @@ async def _(event):
 
 
 
+@borg.on(admin_cmd(pattern=f"linux", allow_sudo=True))
 @borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
 
 async def _(event):
@@ -119,8 +122,8 @@ async def _(event):
 
         animation_chars = [
         
-            "`Connecting To Linux...`",
-            "`Initiating Linux Login.`",
+            "`Connessione a Linux...`",
+            "`Inizializza Linux Login.`",
             "`Loading Linux... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Loading Linux... 3%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Loading Linux... 9%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",    
@@ -139,6 +142,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
+@borg.on(admin_cmd(pattern=f"stock", allow_sudo=True))
 @borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
 
 async def _(event):
@@ -159,8 +163,8 @@ async def _(event):
 
         animation_chars = [
         
-            "`Connecting To Symbian OS...`",
-            "`Initiating Symbian OS Login.`",
+            "`Connessione a Symbian OS...`",
+            "`Inizializza Symbian OS Login.`",
             "`Loading Symbian OS... 0%\n█████████████████████████ `",
             "`Loading Symbian OS... 3%\n█████████████████████▒▒▒▒ `",
             "`Loading Symbian OS... 9%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",    
@@ -178,38 +182,3 @@ async def _(event):
 
             await event.edit(animation_chars[i % 11])
 
-
-@borg.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
-
-async def _(event):
-
-    if event.fwd_from:
-
-        return
-
-    animation_interval = 0.1
-
-    animation_ttl = range(0, 7)
-
-    input_str = event.pattern_match.group(1)
-
-    if input_str == "os":
-
-        await event.edit(input_str)
-
-        animation_chars = [
-        
-            "`Scanning OS...`",
-            "`Scanning OS......`",
-            "__Current Loaded OS: Symbian OS__\n\n**To Boot Other OS, Use The Following Trigger:**\n☑️ `.macos`\n☑️ `.windows`\n☑️ `.linux`\n☑️ `.stock`",
-            "__Current Loaded OS: Symbian OS__\n\n**To Boot Other OS, Use The Following Trigger:**\n✅ `.macos`\n☑️ `.windows`\n☑️ `.linux`\n☑️ `.stock`",
-            "__Current Loaded OS: Symbian OS__\n\n**To Boot Other OS, Use The Following Trigger:**\n✅ `.macos`\n✅ `.windows`\n☑️ `.linux`\n☑️ `.stock`",
-            "__Current Loaded OS: Symbian OS__\n\n**To Boot Other OS, Use The Following Trigger:**\n✅ `.macos`\n✅ `.windows`\n✅ `.linux`\n☑️ `.stock`",
-            "__Current Loaded OS: Symbian OS__\n\n**To Boot Other OS, Use The Following Trigger:**\n✅ `.macos`\n✅ `.windows`\n✅ `.linux`\n✅ `.stock`\n\nDeveloped By: @shivamkchoudhary"
- ]
-
-        for i in animation_ttl:
-
-            await asyncio.sleep(animation_interval)
-
-            await event.edit(animation_chars[i % 7])
