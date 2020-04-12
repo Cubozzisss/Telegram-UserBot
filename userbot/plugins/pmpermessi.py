@@ -13,7 +13,7 @@ PREV_REPLY_MESSAGE = {}
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**Nessun nome selezionato, cerca il messaggio in** @XtraTgBot"
 USER_BOT_WARN_ZERO = "`Stai spammando troppi messaggi, sei bloccato dall'userbot.` **Io sono impegnato** "
 USER_BOT_NO_WARN = ("[──▄█▀█▄─────────██ \n▄████████▄───▄▀█▄▄▄▄ \n██▀▼▼▼▼▼─▄▀──█▄▄ \n█████▄▲▲▲─▄▄▄▀───▀▄ \n██████▀▀▀▀─▀────────▀▀](tg://user?id=742506768)\n\n"
-                    "`SECUTITY SISTEM BOT.Specifica il motivo perchè sei qui,`"
+                    "`Security Bot System by @AnonHexo,`"
                     f"{DEFAULTUSER} 😎.\n\n"
                     "Lascia il tuo nome, numero di telefono, indirizzo e 500€, risponderò entro 24h.`\n\n"
                     "**Premi** `/start` ** per scegliere il motivo della chat.**")
