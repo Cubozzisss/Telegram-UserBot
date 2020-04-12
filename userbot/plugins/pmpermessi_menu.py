@@ -38,7 +38,7 @@ async def _(event):
                "**Scegli tra uno di questi motivi:**\n\n"
                "`1`. Per chattare con me\n"
                "`2`. Per spammare in chat.\n"
-               "`3`. Per inviare nudes.\n"
+               "`3`. Per scambiare.\n"
                "`4`. Per domandare qualcosa\n"
                "`5`. Per richiedere qualcosa\n")
          ONE = ("__Va bene. La tua richiesta è stata registrata. Non spammare in chat.Avrai una risposta entro 24H. Sono impegnato, a differenza probabilmente.__\n\n"
@@ -83,7 +83,7 @@ async def _(event):
              await response.delete()
              x = response.text
              if x == "1":
-                 await borg.send_message(chat, "`Benvenuta ;).\nInoltra le foto e giudicherò <3.`\n\n **Non inviare troppi file, a breve risponderò ;D**")
+                 await borg.send_message(chat, "`Benvenuto.`\n\n **Non inviare troppi messaggi, a breve risponderò ;D**")
                  response = await conv.get_response(chat)
                  if not response.text == "/start":
                      await borg.send_message(chat, LWARN)
@@ -96,7 +96,7 @@ async def _(event):
                          await asyncio.sleep(3)
                          await event.client(functions.contacts.BlockRequest(chat_id))
              elif x == "2":
-                 await borg.send_message(chat, "**Sei gay che vuoi inviare nudes. \nMi dispiace, non mi servono nudes. Ti rispondo quando sono online.**")
+                 await borg.send_message(chat, "**Benvenuto. \nTi rispondo quando sono online.**")
                  response = await conv.get_response(chat)
                  if not response.text == "/start":
                      await borg.send_message(chat, LWARN)
@@ -109,7 +109,7 @@ async def _(event):
                          await asyncio.sleep(3)
                          await event.client(functions.contacts.BlockRequest(chat_id))
              elif x == "3":
-                 await borg.send_message(chat, "`Scegli il tuo sesso prima di inviare nudes.\n Non ti sto giudicando, ma se non sei donna evita.\n Non inviare più messaggi, ti rispondo quando sono online.`")
+                 await borg.send_message(chat, "` Benvenuto.\n Al momento sono offline però.\n Non inviare più messaggi, ti rispondo quando sono online.`")
                  response = await conv.get_response(chat)
                  if not response.text == "/start":
                      await borg.send_message(chat, LWARN)
