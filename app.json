@@ -1,6 +1,6 @@
 {
-  "name": "IIOOIIOIIOOII",
-  "description": "Userbot created by SNAPDRAGON and custom fork by ANUBIS\n\n join https://t.me/IOIIOIIIOIIOI for any problems or support",
+  "name": "AnonBot ITA",
+  "description": "Userbot created by @AnonHexo \n\n Join https://t.me/AnonBotSupport for any problems or support",
   "logo": "https://telegra.ph/file/1be6c59f53fef57b5745b.jpg",
   "keywords": [
     "telegram",
@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/IIOOIIOIIOOII/USERBOT-ITA/",
+  "repository": "https://github.com/AlpHyx74/USERBOT-ITA/",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
