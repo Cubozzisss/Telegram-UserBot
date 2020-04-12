@@ -9,7 +9,7 @@ Join https://t.me/AnonBotSupport for updates
 
 Simply clone the repository and run the main file:
 ```sh
-git clone https://github.com/IIOOIIOIIOOII/USERBOT-ITA
+git clone https://github.com/AlpHyx74/USERBOT-ITA
 cd USERBOT-ITA
 virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
