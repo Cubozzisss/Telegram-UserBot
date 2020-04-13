@@ -57,7 +57,7 @@ async def _(event):
         packshortname = "AnonHexo_Pack"
     else:
         packname = f"AnonHexo: {userid}"
-        packshortname = f"Pack_{userid}_ns"
+        packshortname = f"Pack_{userid}"
     await event.edit("`Look dat way,it's a gurl!\nMeanwhile, lemme kang this stcker over hehe ヽ༼ ಠ益ಠ ༽ﾉ`")
 
     is_a_s = is_it_animated_sticker(reply_message)
@@ -71,8 +71,8 @@ async def _(event):
             packname = f"AnonHexoAnimated"
             packshortname = "AnonHexo_it__Animated"
         else:
-            packname = f"{userid}'s kang pack"
-            packshortname = f"AnonHexo_{userid}" # format: Uni_Borg_userid
+            packname = f"AnonHexo's kang pack"
+            packshortname = f"Pack_{userid}" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
         return
@@ -132,7 +132,7 @@ async def _(event):
                 while response.text == FILLED_UP_DADDY:
                     pack += 1
                     prevv = int(pack) - 1
-                    packname = f"{user.first_name}'s AnonHexoBot Vol.{pack}"
+                    packname = f"AnonHexo's Pack Vol.{pack}"
                     packshortname = f"Vol_{pack}_with_{user.first_name}"
                     #if userid == 948408212:
                        # packname = f"{user.first_name}'s AnonHexoBot Vol.{pack}"
