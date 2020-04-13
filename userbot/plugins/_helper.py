@@ -28,8 +28,8 @@ async def cmd_list(event):
             else:
                 await event.edit(input_str + " is not a valid plugin!")
         else:
-            help_string = """Userbot Helper Creato da @AnonHexo \n\n
-`Userbot Helper per i comandi`\n__Premi .help plugin_name, in caso non sia qui.__"""
+            help_string = """🌀 [AnonHexo UserBot](https://github.com/AnonHexo/Telegram-UserBot) Help Menu 🌀 \n\n
+            \n__non tovi il modulo? prova con: .help <plugin_name>.__"""
             results = await bot.inline_query(  # pylint:disable=E0602
                 tgbotusername,
                 help_string
