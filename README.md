@@ -2,7 +2,7 @@
 
 # Come installare il Bot?
 
-Entra su https://t.me/AnonBotSupport per aggiornamenti e supporto
+Entra sul canale ***[Telegram ufficiale](https://t.me/AnonHexoUserBot)*** per aggiornamenti e supporto
 
 ### Deploya Il Bot Su Heroku (dopo aver ottenuto la string session ↓)
 
