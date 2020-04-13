@@ -13,18 +13,18 @@ async def _(event):
    if event.fwd_from:
       return 
    if not event.reply_to_msg_id:
-      await event.edit("```Reply to any user message.```")
+      await event.edit("`Rispondi ad un messaggio di un utente.")
       return
    reply_message = await event.get_reply_message() 
    if not reply_message.text:
-      await event.edit("```reply to text message```")
+      await event.edit("Rispondi ad un messaggio di testo.")
       return
    chat = "@SangMataInfo_bot"
    sender = reply_message.sender
    if reply_message.sender.bot:
       await event.edit("```Reply to actual users message.```")
       return
-   await event.edit("```Processing```")
+   await event.edit("Caricamento...")
    async with borg.conversation(chat) as conv:
          try:     
             response = conv.wait_event(events.NewMessage(incoming=True,from_users=461843263))
@@ -44,7 +44,7 @@ async def _(event):
       return 
    chat = "@fakemailbot"
    command = "/generate"
-   await event.edit("```Fakemail Creating, wait```")
+   await event.edit("Creazione fakemail in corso...")
    async with borg.conversation(chat) as conv:
       try:
          m = await event.client.send_message("@fakemailbot","/generate")     
@@ -63,7 +63,7 @@ async def _(event):
       return 
    chat = "@fakemailbot"
    command = "/id"
-   await event.edit("```Fakemail list getting```")
+   await event.edit("Fakemail list getting...")
    async with borg.conversation(chat) as conv:
         try:
             m = await event.client.send_message("@fakemailbot","/id")     
