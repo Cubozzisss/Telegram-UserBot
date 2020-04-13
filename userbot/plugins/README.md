@@ -1,12 +1,3 @@
-## Mandatory Imports
-```python3
-None
-```
-There is None Mandatory Imports. Because Var, bot and command are already automatically imported.
-
-## Explanation
-The Mandatory Imports are now automatically imported.
-
 ### Formation
 Now I will show a short script to show the formation of the desired script.
 ```python3
@@ -16,3 +7,8 @@ async def hello_world(event):
         return
     await event.edit("**HELLO WORLD**\n\nThe following is controlling me too!\n" + Var.SUDO_USERS)
 ```
+
+## CREDITS TO:
+
+***Official Bot Dveloper: [anubis](https://github.com/Dark-Princ3/)***
+***Official Bot Developer: [SnapDragon7410](https://github.com/SnapDragon7410)***
