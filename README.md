@@ -6,7 +6,7 @@ Entra su https://t.me/AnonBotSupport per aggiornamenti e supporto
 
 ### Deploya Il Bot Su Heroku (dopo aver ottenuto la string session ↓)
 
-![Deploy In Heroku (https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[https://www.herokucdn.com/deploy/button.svg](https://heroku.com/deploy)
 
 ### Ottenere la String Session con Termux
 
