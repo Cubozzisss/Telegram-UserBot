@@ -1,7 +1,7 @@
 {
   "name": "AnonBot ITA",
   "description": "Userbot created by @AnonHexo \n\n Join https://t.me/AnonBotSupport for any problems or support",
-  "logo": "https://telegra.ph/file/1be6c59f53fef57b5745b.jpg",
+  "logo": "https://pluspng.com/img-png/telegram-logo-png-open-2000.png",
   "keywords": [
     "telegram",
     "userbot",
@@ -77,7 +77,7 @@
       "required": false
     },
     "GIT_REPO_NAME": {
-      "description": "Your repo name Example: IIOOIIOIIOOII/USERBOT-ITA, but GITHUB_ACCESS_TOKEN must be setup first.",
+      "description": "Your repo name Example: AlpHyx74/USERBOT-ITA, but GITHUB_ACCESS_TOKEN must be setup first.",
       "value": "",
       "required": false
     },
