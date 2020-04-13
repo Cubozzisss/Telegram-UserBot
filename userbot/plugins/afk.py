@@ -3,6 +3,7 @@ Syntax: .afk REASON"""
 
 import asyncio
 import datetime
+from userbot import ALIVE_NAME
 from datetime import datetime
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**Nessun nome selezionato, controlla su @AnonHexoUserBot"
