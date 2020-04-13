@@ -5,6 +5,8 @@ import asyncio
 import datetime
 from datetime import datetime
 
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**Nessun nome selezionato, controlla su @AnonHexoUserBot"
+
 from telethon import events
 from telethon.tl import functions, types
 
@@ -48,13 +50,13 @@ async def _(event):
         if reason:
             await borg.send_message(event.chat_id, f"**     ⛔️ AL MOMENTO SONO OFFLINE.** **\nQUINDI NON SPAMMATE NELLA CHAT, GRAZIE 🌈** **\nRISPONDERO APPENA SONO DISPONIBILE! \n〽️** __MOTIVO ~ {reason}__ \n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n\n**.     ⛔️ AT THE MOMENT I'M OFFLINE.**\n**SO PLEASE DON'T SPAM IN MY CHAT, THANKS 🌈** \n**I'LL AWNSER AS SOON AS POSIBLE! \n〽️** __REASON ~ {reason}__")
         else:
-            await borg.send_message(event.chat_id, f"**⛔ __ora sono AFK__ ⛔**\n\n- - - - - -\n\n**⛔ __i'm now AFK__ ⛔**")
+            await borg.send_message(event.chat_id, f"**  🔒 __adesso sono AFK__  **\n\n- - - - - -\n\n**🔒 __i'm now AFK__**")
         await asyncio.sleep(5)
         await event.delete()
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
-                f"MODE AFK ON {reason}"
+                f"**[ON: {reason}]** \n __Hi__ **{DEAFULTUSER}**, \n The **AFK** Mode has been turned **ON** \n **REASON:**{reason}"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             logger.warn(str(e))  # pylint:disable=E0602
@@ -73,11 +75,11 @@ async def set_not_afk(event):
         total_afk_time = str((afk_end - afk_start))
     current_message = event.message.message
     if ".afk" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
-        shite = await borg.send_message(event.chat_id, "__🎲 Non sono più AFK! 🎲 __\n**🔸 Ora puoi scrivermi.**\n**🔹 Sono stato afk per:**" + total_afk_time + "\n **__[userbot afk system by](https://github.com/AnonHexo/Telegram-UserBot) @AnonHexo__**")
+        shite = await borg.send_message(event.chat_id, "__🎲 ** Non sono più AFK! **  🎲 __\n**🔸 Ora puoi scrivermi.**\n**🔹 Sono stato afk per:**" + total_afk_time + "\n **__UserBot afk system by @AnonHexo__**")
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
-                "Hi {DEAFULTUSER}, \n The AFK Mode has been turned ON "
+                "**[OFF]** \n __Hi__ **{DEAFULTUSER}**, \n The **AFK** Mode has been turned **OFF** "
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
@@ -110,7 +112,7 @@ async def on_afk(event):
     afk_end = back_alivee.replace(microsecond=0)
     if afk_start != {}:
         total_afk_time = str((afk_end - afk_start))
-    afk_since = "**poco fà**"
+    afk_since = "**poco fa**"
     current_message_text = event.message.message.lower()
     if "afk" in current_message_text:
         # userbot's should not reply to other userbot's
@@ -140,11 +142,11 @@ async def on_afk(event):
                     wday = now + datetime.timedelta(days=-days)
                     afk_since = wday.strftime('%A')
             elif hours > 1:
-                afk_since = f"`{int(hours)}h{int(minutes)}m` **fà**"
+                afk_since = f"`{int(hours)}h{int(minutes)}m` **fa**"
             elif minutes > 0:
-                afk_since = f"`{int(minutes)}m{int(seconds)}s` **fà**"
+                afk_since = f"`{int(minutes)}m{int(seconds)}s` **fa**"
             else:
-                afk_since = f"`{int(seconds)}s` **fà**"
+                afk_since = f"`{int(seconds)}s` **fa**"
         msg = None
         message_to_reply = f"**     ⛔️ AL MOMENTO SONO OFFLINE.** **\nQUINDI NON SPAMMATE NELLA CHAT, GRAZIE 🌈** **\nRISPONDERO APPENA SONO DISPONIBILE! \n〽️** __AFK DA ~ `{total_afk_time}`__ \n__🔸 MOTIVO ~ {reason}__ \n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n\n**     ⛔️ AT THE MOMENT I'M OFFLINE.**\n**SO PLEASE DON'T SPAM IN MY CHAT, THANKS 🌈** \n**I'LL AWNSER AS SOON AS POSIBLE!" + \
                            f"\n〽️** __AFK FOR ~ `{total_afk_time}`__ \n__🔸 REASON ~ {reason}__" \
