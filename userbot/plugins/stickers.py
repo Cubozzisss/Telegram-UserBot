@@ -56,8 +56,8 @@ async def _(event):
         packname = f"AnonHexo_Bot"
         packshortname = "AnonHexo_Pack"
     else:
-        packname = f"AnonHexo: {userid}"
-        packshortname = f"Pack_{userid}"
+        packname = f"{user.first_name} pack by AnonHexoBot"
+        packshortname = f"Pack_{user.first_name}"
     await event.edit("`Look dat way,it's a gurl!\nMeanwhile, lemme kang this stcker over hehe ヽ༼ ಠ益ಠ ༽ﾉ`")
 
     is_a_s = is_it_animated_sticker(reply_message)
@@ -71,8 +71,8 @@ async def _(event):
             packname = f"AnonHexoAnimated"
             packshortname = "AnonHexo_it__Animated"
         else:
-            packname = f"AnonHexo's kang pack"
-            packshortname = f"Pack_{userid}" # format: Uni_Borg_userid
+            packname = f"{user.first_name} pack by AnonHexoBot"
+            packshortname = f"Pack_{user.first_name}" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
         return
@@ -132,8 +132,8 @@ async def _(event):
                 while response.text == FILLED_UP_DADDY:
                     pack += 1
                     prevv = int(pack) - 1
-                    packname = f"AnonHexo's Pack Vol.{pack}"
-                    packshortname = f"Vol_{pack}_with_{user.first_name}"
+                    packname = f"{user.first_name} pack by AnonHexoBot"
+                    packshortname = f"Pack {user.first_name}"
                     #if userid == 948408212:
                        # packname = f"{user.first_name}'s AnonHexoBot Vol.{pack}"
                        # packshortname = "Vol._{pack}_AnonHexoBot_ke_locker_me"
@@ -223,12 +223,12 @@ async def _(event):
     for document_sticker in get_stickerset.packs:
         if document_sticker.emoticon not in pack_emojis:
             pack_emojis.append(document_sticker.emoticon)
-    await event.edit(f"**Sticker Title:** `{get_stickerset.set.title}\n`"
-                     f"**Sticker Short Name:** `{get_stickerset.set.short_name}`\n"
-                     f"**Official:** `{get_stickerset.set.official}`\n"
-                     f"**Archived:** `{get_stickerset.set.archived}`\n"
-                     f"**Stickers In Pack:** `{len(get_stickerset.packs)}`\n"
-                     f"**Emojis In Pack:** {' '.join(pack_emojis)}")
+    await event.edit(f"**🖊️ Sticker Title:** `{get_stickerset.set.title}\n`"
+                     f"**🖋️ Sticker Short Name:** `{get_stickerset.set.short_name}`\n"
+                     f"**✅ Official:** `{get_stickerset.set.official}`\n"
+                     f"**🗂️ Archived:** `{get_stickerset.set.archived}`\n"
+                     f"**〽️ Stickers In Pack:** `{len(get_stickerset.packs)}`\n"
+                     f"**💠 Emojis In Pack:** {' '.join(pack_emojis)}")
 
 
 @borg.on(admin_cmd(pattern="getsticker ?(.*)"))
