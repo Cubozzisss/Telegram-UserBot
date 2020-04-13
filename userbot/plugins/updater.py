@@ -44,15 +44,15 @@ IS_SELECTED_DIFFERENT_BRANCH = (
     "in this case, Updater is unable to identify the branch to be updated."
     "please check out to an official branch, and re-start the updater."
 )
-OFFICIAL_UPSTREAM_REPO = "https://github.com/AlpHyx74/USERBOT-ITA"
-BOT_IS_UP_TO_DATE = "`Update in corso.\nGrazie per aver utilizzato il servizio.`"
+OFFICIAL_UPSTREAM_REPO = "https://github.com/AlpHyx74/USERBOT-ITA/"
+BOT_IS_UP_TO_DATE = "`The userbot is up-to-date.\nThank you for Using this Service.`"
 NEW_BOT_UP_DATE_FOUND = (
-    "new update found {branch_name}\n"
+    "new update found for {branch_name}\n"
     "changelog: \n\n{changelog}\n"
     "updating ..."
 )
 NEW_UP_DATE_FOUND = (
-    "new update found {branch_name}\n"
+    "New update found for {branch_name}\n"
     "`updating ...`"
 )
 REPO_REMOTE_NAME = "temponame"
@@ -168,9 +168,7 @@ def generate_change_log(git_repo, diff_marker):
 
 async def deploy_start(tgbot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
-    await message.edit("Update in corso. Attendi 5 minuti e premi `.alive`.")
+    await message.edit("Updating and Deploying New Branch. Please wait for 5 minutes then use `.alive` to check if i'm working or not.")
     await remote.push(refspec=refspec)
     await tgbot.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
-
-    
