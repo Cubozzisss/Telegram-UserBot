@@ -6,13 +6,11 @@ Entra sul canale ***[Telegram ufficiale](https://t.me/AnonHexoUserBot)*** per ag
 
 ***
 
-***
 
 ### Come Installare il Bot?
 
 Guarda la ***[wiki di GitHub](https://github.com/AlpHyx74/USERBOT-ITA/wiki)*** per le istruzioni
 
-***
 
 ### Deploya Il Bot Su Heroku (dopo aver ottenuto la string session ↓)
 
@@ -20,7 +18,6 @@ Guarda la ***[wiki di GitHub](https://github.com/AlpHyx74/USERBOT-ITA/wiki)*** p
 
 ***
 
-***
 
 # CREDITS TO:
 
