@@ -4,11 +4,17 @@ Syntax: .afk REASON"""
 import asyncio
 import datetime
 from datetime import datetime
+import asyncio
 import io
+import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon import events, errors, functions, types
 from userbot import ALIVE_NAME, LESS_SPAMMY
 from userbot.utils import admin_cmd
+
+PM_WARNS = {}
+PREV_REPLY_MESSAGE = {}
+
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**Nessun nome selezionato, controlla su @AnonHexoUserBot"
 
