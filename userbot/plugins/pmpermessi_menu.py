@@ -28,7 +28,7 @@ async def _(event):
         if event.fwd_from:
             return
         if event.is_private:
-         Nudas = ("__Please, indica il tuo sesso.__\n"
+         Nudas = ("__Indica il tuo sesso.__\n"
                   "`1`. Donna\n"
                   "`2`. Uomo\n"
                   "`3`. Altro\n")
@@ -45,8 +45,8 @@ async def _(event):
                 "**⚠️ Verrai bloccato e segnalato se continui a spammare. ⚠️**\n\n"
                 "__Premi__ `/start` __per tornare al menù principale__")
          TWO = (" `███████▄▄███████████▄  \n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓███░░░░░░░░░░░░█\n██████▀▀▀█░░░░██████▀  \n░░░░░░░░░█░░░░█  \n░░░░░░░░░░█░░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░░▀▀ `\n\n**Ti avevo avvisato. Vai a dare fastidio ad altri,sei stato bloccato e segnalato, quando vedo ti sblocco.**")
-         FOUR = ("__Va bene. Non ho visto il tuo messaggio.Di solito rispondo a tutti anche ai ritardati.__\n __Quando torno ti rispondo, se voglio.Ho troppe chat aperte😶__\n **Please non spammare se non vuoi essere bloccato e segnalato.**")
-         FIVE = ("`Va bene,non inviare altri messaggi non ci sono. Ti risponderò il al più presto.`\n**Non continuare, altrimenti verrai segnalato e bloccato.**")
+         FOUR = ("__Va bene. Non ho visto il tuo messaggio. Di solito rispondo a tutti anche agli stupidi.__\n __Quando torno ti rispondo, se voglio. Ho troppe chat aperte😶__\n **Please non spammare se non vuoi essere bloccato e segnalato.**")
+         FIVE = ("Va bene,non inviare altri messaggi non ci sono. Ti risponderò il al più presto.`\n**Non continuare, altrimenti verrai segnalato e bloccato.**")
          LWARN = ("**Ultimo avviso. Non inviare un altro messeggio altrimenti verrai bloccato e segnalato. Attendi ti risponderò al più presto.**\n__Premi__ `/start` __per tornare al menù principale.__")
      
         async with borg.conversation(chat) as conv:
