@@ -39,12 +39,12 @@ async def sticklet(event):
     draw.multiline_text(((512-width)/2,(512-height)/2), sticktext, font=font, fill=(R, G, B))
 
     image_stream = io.BytesIO()
-    image_stream.name = "@UniBorg.webp"
+    image_stream.name = "@AnonHexo.webp"
     image.save(image_stream, "WebP")
     image_stream.seek(0)
 
 
-    await event.reply("https://t.me/hassanmuaed", file=image_stream)
+    await event.reply("https://t.me/AnonHexo", file=image_stream)
 
 
     try:
