@@ -3,8 +3,12 @@ Syntax: .afk REASON"""
 
 import asyncio
 import datetime
-from userbot import ALIVE_NAME
 from datetime import datetime
+import io
+from telethon.tl.functions.users import GetFullUserRequest
+from telethon import events, errors, functions, types
+from userbot import ALIVE_NAME, LESS_SPAMMY
+from userbot.utils import admin_cmd
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**Nessun nome selezionato, controlla su @AnonHexoUserBot"
 
