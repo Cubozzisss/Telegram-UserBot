@@ -1,52 +1,45 @@
-# FORK AT YOUR OWN RISK
-# Installing
-Join https://t.me/AnonBotSupport for updates
-### The Easy Way
+# TELEGRAM USERBOT ITA
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+# Come installare il Bot?
 
-### The Normal Way
+Entra su https://t.me/AnonBotSupport per aggiornamenti e supporto
 
-Simply clone the repository and run the main file:
-```sh
-git clone https://github.com/AlpHyx74/USERBOT-ITA
-cd USERBOT-ITA
-virtualenv -p /usr/bin/python3 venv
-. ./venv/bin/activate
-pip install -r requirements.txt
-# <Create local_config.py with variables as given below>
-python3 -m userbot
-```
+### Deploya Il Bot Su Heroku (dopo aver ottenuto la string session ↓)
 
-An example `local_config.py` file could be:
+![Deploy To Heroku (https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-**Not All of the variables are mandatory**
+### Ottenere la String Session con Termux
 
-__The Userbot should work by setting only the first two variables__
+Apri temux e incolla questa stringa, poi premi invio.
+sh
+termux-setup-storage && cd $RK && apt update -y && apt upgrade -y && apt install git -y && git clone https://github.com/AlpHyx74/USERBOT-ITA && apt install git python -y && pip install telethon
 
-```python3
-from heroku_config import Var
 
-class Development(Var):
-  APP_ID = 6
-  API_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
-```
+Adesso inserisci questo comando:
+sh
+cd $RK && cd USERBOT-ITA && python telesetup.py
 
-### UniBorg Configuration
 
-The UniBorg Config is situated in `userbot/uniborgConfig.py`.
+inserisci tutti i campi necessari e copia l'ultima stringa
+esempio:
+Enter App ID: 00000
+Enter App HASH: aaaaaaaaa58aajsksksois628
+Enter Phone Number: +393000000000
+Enter the code you received: 00000
+Logged in as: Nome Cognome
+qui ci dovrebbe essere la stringa che dovete copiare
 
-**Heroku Configuration**
-Simply just leave the Config as it is.
 
-**Local Configuration**
-Check [Line 111](https://github.com/Total-Noob-69/X-tra-Telegram/blob/master/userbot/uniborgConfig.py#L111) and start adding your vars there.
-Fortunately there are no Mandatory vars for the UniBorg Support Config.
+## Variabili Necessarie e Come Ottenerle
 
-## Mandatory Vars
+API_KEY: my.telegram.org e crea una app
+API_HASH: my.telegram.org e crea una app
+STRING_SESSION: segui il passaggio qui sopra elencato
+PRIVATE_GROUP_ID: crea un gruppo e ottiedi l'id digitando /id dopo aver aggiunto il bot @MissRose_bot
+SUDO_USER: il tuo id (puoi settarlo dopo)
+TG_BOT_TOKEN_BF_HER: crea un bot su @BotFather e copia il token
+TG_BOT_USER_NAME_BF_HER: crea un bot su @BotFather e inserisci l'username (con la @)
+HEROKU_API_KEY: vai sul tuo account heroku (https://dashboard.heroku.com/account) e copia la API key
+HEROKU_APP_NAME: nome dell'app che si sta creando (quella che avete messo all'inizio)
 
-- Only two of the environment variables are mandatory.
-- This is because of `telethon.errors.rpc_error_list.ApiIdPublishedFloodError`
-    - `APP_ID`:   You can get this value from https://my.telegram.org
-    - `API_HASH`:   You can get this value from https://my.telegram.org
-- The userbot will not work without setting the mandatory vars.
+*tutte queste sono necessarie per avere le funzionalità del bot principali*
