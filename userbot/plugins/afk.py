@@ -4,19 +4,6 @@ Syntax: .afk REASON"""
 import asyncio
 import datetime
 from datetime import datetime
-import asyncio
-import io
-import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
-from telethon.tl.functions.users import GetFullUserRequest
-from telethon import events, errors, functions, types
-from userbot import ALIVE_NAME, LESS_SPAMMY
-from userbot.utils import admin_cmd
-
-PM_WARNS = {}
-PREV_REPLY_MESSAGE = {}
-
-
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**Nessun nome selezionato, controlla su @AnonHexoUserBot"
 
 from telethon import events
 from telethon.tl import functions, types
@@ -67,7 +54,7 @@ async def _(event):
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
-                f"**[ON: {reason}]** \n __Hi__ **{DEAFULTUSER}**, \n The **AFK** Mode has been turned **ON** \n **REASON:**{reason}"
+                f"**[ON: {reason}]** \n __Hi__ man, \n The **AFK** Mode has been turned **ON** \n **REASON:**{reason}"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             logger.warn(str(e))  # pylint:disable=E0602
@@ -90,7 +77,7 @@ async def set_not_afk(event):
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
-                "**[OFF]** \n __Hi__ **{DEAFULTUSER}**, \n The **AFK** Mode has been turned **OFF** "
+                "**[OFF]** \n __Hi__ man, \n The **AFK** Mode has been turned **OFF** "
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             await borg.send_message(  # pylint:disable=E0602
