@@ -3,7 +3,7 @@ from telethon.sync import TelegramClient
 from telethon import functions, types
 from userbot.events import register
 
-message = "**⛔️ Al momento sono OFFLINE non disturbare. \n⚠️ Risponderò il prima possibile.\n\nNON spammatemi troppi messaggi!**"
+message = "**          ⛔️ AL MOMENTO SONO OFFLINE.** **\nQUINDI NON SPAMMATE NELLA CHAT, GRAZIE 🌈** **\nRISPONDERO APPENA SONO DISPONIBILE!** \n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n\n**         ⛔️ AT THE MOMENT I'M OFFLINE.**\n**SO PLEASE DON'T SPAM IN MY CHAT, THANKS 🌈** \n**I'LL AWNSER AS SOON AS POSIBLE!**"
 exempt = []
 mutedList = []
 autoNiceText = True
