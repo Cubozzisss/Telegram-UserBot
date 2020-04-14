@@ -50,14 +50,14 @@ async def _(event):
         user.first_name = user.id
     pack = 1
     userid = event.from_id
-    #packname = f"AnonHexo™keStickers"
+    #packname = f"AnonHexo™Stickers"
     #packshortname = f"AnonHexo_{userid}_ns"  # format: Uni_Borg_userid
     if userid == 953414679:
         packname = f"AnonHexo_Bot"
         packshortname = "AnonHexo_Pack"
     else:
-        packname = f"{user.first_name} pack by AnonHexoBot"
-        packshortname = f"Pack_{user.first_name}"
+        packname = f"{user.first_name} vol.{pack} by @AnonHexoUserBot"
+        packshortname = f"pack_{userid}_vol.{pack}"
     await event.edit("`Look dat way,it's a gurl!\nMeanwhile, lemme kang this stcker over hehe ヽ༼ ಠ益ಠ ༽ﾉ`")
 
     is_a_s = is_it_animated_sticker(reply_message)
@@ -71,8 +71,8 @@ async def _(event):
             packname = f"AnonHexoAnimated"
             packshortname = "AnonHexo_it__Animated"
         else:
-            packname = f"{user.first_name} pack by AnonHexoBot"
-            packshortname = f"Pack_{userid}_vol.{pack}" # format: Uni_Borg_userid
+            packname = f"{user.first_name} vol.{pack} by @AnonHexoUserBot"
+            packshortname = f"pack_{userid}_vol.{pack}" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
         return
@@ -132,14 +132,14 @@ async def _(event):
                 while response.text == FILLED_UP_DADDY:
                     pack += 1
                     prevv = int(pack) - 1
-                    packname = f"{user.first_name} pack by AnonHexoBot"
-                    packshortname = f"Pack_{userid}_vol.{pack}"
+                    packname = f"{user.first_name} vol.{pack} by @AnonHexoUserBot"
+                    packshortname = f"pack_{userid}_vol.{pack}"
                     #if userid == 948408212:
                        # packname = f"{user.first_name}'s AnonHexoBot Vol.{pack}"
-                       # packshortname = "Vol._{pack}_AnonHexoBot_ke_locker_me"
+                       # packshortname = "pack_{userid}_vol.{pack}"
                    # else:
-                       # packname = f"Vol._{pack}_AnonHexoBotBot{userid}"
-                        #packshortname = f"Vol._{pack}_AnonHexoBotBot_{userid}_ns"
+                       # packname = f"{user.first_name} vol.{pack} by @AnonHexoUserBot"
+                        #packshortname = f"pack_{userid}_vol.{pack}"
                     if not await stickerset_exists(bot_conv, packshortname):
                         await event.edit("**Pack No. **" + str(prevv) + "** full! Making a new Pack, Vol. **" + str(pack))
                         if is_a_s:
