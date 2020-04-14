@@ -72,7 +72,7 @@ async def _(event):
             packshortname = "AnonHexo_it__Animated"
         else:
             packname = f"{user.first_name} pack by AnonHexoBot"
-            packshortname = f"Pack_{user.first_name}" # format: Uni_Borg_userid
+            packshortname = f"Pack_{userid}_vol.{pack}" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
         return
@@ -133,7 +133,7 @@ async def _(event):
                     pack += 1
                     prevv = int(pack) - 1
                     packname = f"{user.first_name} pack by AnonHexoBot"
-                    packshortname = f"Pack {user.first_name}"
+                    packshortname = f"Pack_{userid}_vol.{pack}"
                     #if userid == 948408212:
                        # packname = f"{user.first_name}'s AnonHexoBot Vol.{pack}"
                        # packshortname = "Vol._{pack}_AnonHexoBot_ke_locker_me"
