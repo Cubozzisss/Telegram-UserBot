@@ -16,5 +16,5 @@ async def install(event):
     o = stdout.decode()
     _o = o.split("\n")
     o = "\n".join(_o)
-    OUTPUT = f"**ℹ️ LISTA PLUG-IN 🔍:**\n{o}\n\n**ℹ️ SUGGERIMENTO:** __Per vedere i comandi di un plug-in, fai:-__ \n `.help <plugin name>` **senza le parentesi < > .**\n__Tutti i plug-in potrebbero non funzionare. Visita__ ~ @AnonBotSupport ~ __per assistenza.__"
+    OUTPUT = f"**ℹ️ LISTA PLUG-IN 🔍:**\n{o}\n\n**ℹ️ SUGGERIMENTO:** __Per vedere i comandi di un plug-in, fai:-__ \n `.help <plugin name>` **senza le parentesi < > .**\n__Tutti i plug-in potrebbero non funzionare. Visita__ ~ @AnonHexoUserBot ~ __per assistenza.__"
     await event.edit(OUTPUT)
