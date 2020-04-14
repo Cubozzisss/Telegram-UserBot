@@ -3,7 +3,7 @@ from telethon.sync import TelegramClient
 from telethon import functions, types
 from userbot.events import register
 
-message = "**⛔️ Al momento sono OFFLINE non disturbare Ryze\n⚠️ Risponderò il prima possibile.\n\nNON spammatemi troppi messaggi e non rompere i coglioni**"
+message = "**⛔️ Al momento sono OFFLINE non disturbare. \n⚠️ Risponderò il prima possibile.\n\nNON spammatemi troppi messaggi!**"
 exempt = []
 mutedList = []
 autoNiceText = True
@@ -24,7 +24,7 @@ async def BroadCast(e):
     if not str(i) in exempted:
       chats.append(i)
   await asyncio.wait([e.client.send_message(chat, mex) for chat in chats])
-  await e.edit("Mex mandato in tutti i gruppi in cui sei presente!")
+  await e.edit("Messaggio inviato a tutti i gruppi e canale in qui sei presente! by @AnonHexoUserBot")
 
 @register(outgoing=True, pattern="^.pula$")
 async def CARABINIERIIIIIIIIIII(e):
@@ -33,19 +33,15 @@ async def CARABINIERIIIIIIIIIII(e):
     await asyncio.sleep(0.1)
     await asyncio.wait([e.edit("🔵🔵🔵🔵   🔴🔴🔴🔴\n🔵🔵🔵🔵   🔴🔴🔴🔴\n🔵🔵🔵🔵   🔴🔴🔴🔴\n🔵🔵🔵🔵   🔴🔴🔴🔴")])
     await asyncio.sleep(0.1)
-  await asyncio.wait([e.edit("**💦💦💦Arriva assunta la troia sborrata💦💦💦**")])
+  await asyncio.wait([e.edit("**Ecco la pula**")])
 
-@register(outgoing=True, pattern="^.pp$")
+@register(outgoing=True, pattern="^.tg$")
 async def dev(e):
-  await asyncio.wait([e.edit("** https://www.paypal.me/vogliadisoldi puoi pagare pure da qua grazie 👈🏻 ) **")])
+  await asyncio.wait([e.edit("** t.me/AnonHexoUserBot 👈🏻 ) **")])
 
 @register(outgoing=True, pattern="^.rep$")
 async def dev(e):
-  await asyncio.wait([e.edit("** @UshyRep ecco il mio gruppo vendite  **")])
-
-@register(outgoing=True, pattern="^.btc$")
-async def dev(e):
-  await asyncio.wait([e.edit("** non ho un addi fisso :( **")])
+  await asyncio.wait([e.edit("** @AnonHexoFeed 👈 **")])
 
 @register(outgoing=True)
 async def niceText(e):
@@ -71,10 +67,10 @@ async def setNiceText(e):
     global autoNiceText
     if autoNiceText:
       autoNiceText = False
-      await e.edit("`Animazione Testo Disattivata!`")
+      await e.edit("@AnonHexoUserBot - Animazione Testo Disattiva")
     else:
       autoNiceText = True
-      await e.edit("`Animazione Testo Attivata!`")
+      await e.edit("@AnonHexoUserBot - Animazione Testo Attiva")
 
 @register(outgoing=True, pattern="^.mex")
 async def setMessage(e):
@@ -115,7 +111,7 @@ async def autoReply(e):
                 global message
                 await e.respond(message)
                 result = client(functions.account.UpdateProfileRequest(
-                    last_name='- OFFLINE',
+                    last_name='- OFF',
                 ))
                 exempt.remove(e.sender.id)
                 break
